@@ -620,7 +620,7 @@ bool WriterProxyData::readFromCDRMessage(
                             return false;
                         }
 
-                        is_shm_transport_available &= (p.vendorId == c_VendorId_eProsima);
+                        is_shm_transport_available &= (p.vendorId == c_VendorId_Default);
                         break;
                     }
                     case fastdds::dds::PID_DURABILITY:

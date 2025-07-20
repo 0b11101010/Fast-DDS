@@ -386,6 +386,15 @@ endif()
 option(FASTDDS_STATISTICS "Enable Fast DDS Statistics Module" ON)
 
 ###############################################################################
+# Fast DDS Fixed Host ID default setup
+###############################################################################
+option(FASTDDS_FIXED_HOST_ID_ENABLE "Enable Fast DDS Fixed Host ID Module" OFF)
+if (FASTDDS_FIXED_HOST_ID_ENABLE)
+    set(HAVE_FIXED_HOST_ID 1)
+    message(STATUS "HAVE_FIXED_HOST_ID is set to ${HAVE_FIXED_HOST_ID}")
+endif ()
+
+###############################################################################
 # Compile library.
 ###############################################################################
 add_subdirectory(src/cpp)

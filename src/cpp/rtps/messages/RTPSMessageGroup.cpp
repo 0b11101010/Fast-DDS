@@ -379,7 +379,7 @@ bool RTPSMessageGroup::add_info_dst_in_buffer(
     if ((full_msg_->length == RTPSMESSAGE_HEADER_SIZE) &&
             participant_->security_attributes().is_rtps_protected && endpoint_->supports_rtps_protection())
     {
-        RTPSMessageCreator::addSubmessageInfoSRC(buffer, c_ProtocolVersion, c_VendorId_eProsima,
+        RTPSMessageCreator::addSubmessageInfoSRC(buffer, c_ProtocolVersion, c_VendorId_Default,
                 participant_->getGuid().guidPrefix);
     }
 #endif // if HAVE_SECURITY

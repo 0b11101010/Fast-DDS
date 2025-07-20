@@ -163,7 +163,7 @@ const ProtocolVersion_t c_ProtocolVersion;
 //!@brief Structure VendorId_t, specifying the vendor Id of the implementation.
 using VendorId_t = eprosima::fastdds::rtps::VendorId_t;
 using eprosima::fastdds::rtps::c_VendorId_Unknown;
-using eprosima::fastdds::rtps::c_VendorId_eProsima;
+using eprosima::fastdds::rtps::c_VendorId_Default;
 
 } // namespace rtps
 } // namespace fastrtps

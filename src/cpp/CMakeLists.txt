@@ -235,6 +235,7 @@ set(${PROJECT_NAME}_source_files
     utils/SystemInfo.cpp
     utils/TimedConditionVariable.cpp
     utils/string_convert.cpp
+    utils/Host.cpp
 
     dds/core/types.cpp
     dds/core/Exception.cpp

@@ -30,7 +30,7 @@ namespace rtps {
 using VendorId_t = std::array<uint8_t, 2>;
 
 const VendorId_t c_VendorId_Unknown = {0x00, 0x00};
-const VendorId_t c_VendorId_eProsima = {0x01, 0x0F};
+const VendorId_t c_VendorId_Default = {0x45, 0x41};
 
 } // namespace rtps
 } // namespace fastdds

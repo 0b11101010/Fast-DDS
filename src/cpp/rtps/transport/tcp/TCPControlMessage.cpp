@@ -102,7 +102,7 @@ static void operator >>(
 }
 
 ConnectionRequest_t::ConnectionRequest_t()
-    : m_vendorId(fastrtps::rtps::c_VendorId_eProsima)
+    : m_vendorId(fastrtps::rtps::c_VendorId_Default)
 {
 }
 

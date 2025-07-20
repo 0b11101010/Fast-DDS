@@ -96,43 +96,9 @@ public:
 
 private:
 
-    Host()
-    {
-        // Compute the host id
-        fastdds::rtps::LocatorList loc;
-        fastrtps::rtps::IPFinder::getIP4Address(&loc);
-        id_ = compute_id(loc);
-
-        // Compute the MAC id
-        std::vector<fastrtps::rtps::IPFinder::info_MAC> macs;
-        if (fastrtps::rtps::IPFinder::getAllMACAddress(&macs) &&
-                macs.size() > 0)
-        {
-            MD5 md5;
-            for (auto& m : macs)
-            {
-                md5.update(m.address, sizeof(m.address));
-            }
-            md5.finalize();
-            for (size_t i = 0, j = 0; i < sizeof(md5.digest); ++i, ++j)
-            {
-                if (j >= mac_id_length)
-                {
-                    j = 0;
-                }
-                mac_id_.value[j] ^= md5.digest[i];
-            }
-        }
-        else
-        {
-            EPROSIMA_LOG_WARNING(UTILS, "Cannot get MAC addresses. Failing back to IP based ID");
-            for (size_t i = 0; i < mac_id_length; i += 2)
-            {
-                mac_id_.value[i] = (id_ >> 8);
-                mac_id_.value[i + 1] = (id_ & 0xFF);
-            }
-        }
-    }
+#ifdef HAVE_FIXED_HOST_ID
+    static bool compute_machine_id(uint16_t& id);
+#endif // HAVE_FIXED_HOST_ID
 
     uint16_t id_;
     uint48 mac_id_;

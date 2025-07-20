@@ -58,7 +58,7 @@ bool RTPSMessageCreator::addHeader(
         CDRMessage_t* msg,
         const GuidPrefix_t& guidPrefix)
 {
-    return RTPSMessageCreator::addHeader(msg, guidPrefix, c_ProtocolVersion, c_VendorId_eProsima);
+    return RTPSMessageCreator::addHeader(msg, guidPrefix, c_ProtocolVersion, c_VendorId_Default);
 }
 
 bool RTPSMessageCreator::addCustomContent(

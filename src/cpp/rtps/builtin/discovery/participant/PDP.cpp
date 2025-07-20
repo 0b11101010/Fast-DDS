@@ -238,7 +238,7 @@ void PDP::initializeParticipantProxyData(
 
     participant_data->m_leaseDuration = attributes.builtin.discovery_config.leaseDuration;
     //set_VendorId_eProsima(participant_data->m_VendorId);
-    participant_data->m_VendorId = c_VendorId_eProsima;
+    participant_data->m_VendorId = c_VendorId_Default;
 
     // TODO: participant_data->m_availableBuiltinEndpoints |= mp_builtin->available_builtin_endpoints();
 

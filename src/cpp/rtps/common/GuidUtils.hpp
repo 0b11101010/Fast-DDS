@@ -78,8 +78,8 @@ private:
     GuidUtils()
     {
         // This is to comply with RTPS section 9.3.1.5 - Mapping of the GUID_t
-        prefix_.value[0] = c_VendorId_eProsima[0];
-        prefix_.value[1] = c_VendorId_eProsima[1];
+        prefix_.value[0] = c_VendorId_Default[0];
+        prefix_.value[1] = c_VendorId_Default[1];
 
         // On Fast DDS, next two bytes should be the same across all processes on the same host
         uint16_t host_id = SystemInfo::instance().host_id();

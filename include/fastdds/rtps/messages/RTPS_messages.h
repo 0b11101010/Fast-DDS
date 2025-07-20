@@ -58,7 +58,7 @@ enum SubmessageId : uint8_t
      GuidPrefix_t guidPrefix;
      Header_t():
          version(c_ProtocolVersion)
-         , vendorId(c_VendorId_eProsima)
+         , vendorId(c_VendorId_Default)
      {
      }
      ~Header_t(){

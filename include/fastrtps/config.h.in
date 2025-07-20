@@ -75,6 +75,11 @@
 #define HAVE_STRICT_REALTIME @HAVE_STRICT_REALTIME@
 #endif /* ifndef HAVE_STRICT_REALTIME */
 
+// Fixed host ID
+#ifndef HAVE_FIXED_HOST_ID
+#define HAVE_FIXED_HOST_ID @HAVE_FIXED_HOST_ID@
+#endif
+
 /* Log Macros */
 
 // Enable compilation for eProsima Log Macros
