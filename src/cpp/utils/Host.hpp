@@ -95,6 +95,7 @@ public:
     }
 
 private:
+    Host();
 
 #ifdef HAVE_FIXED_HOST_ID
     static bool compute_machine_id(uint16_t& id);
