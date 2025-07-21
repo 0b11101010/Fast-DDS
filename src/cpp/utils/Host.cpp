@@ -21,7 +21,7 @@ namespace eprosima {
 
 Host::Host()
 {
-#ifdef HAVE_FIXED_HOST_ID
+#if HAVE_FIXED_HOST_ID
     if (!compute_machine_id(id_))
     {
         // Fallback to IP-based computation if machine-id fails
@@ -68,7 +68,7 @@ Host::Host()
     }
 }
 
-#ifdef HAVE_FIXED_HOST_ID
+#if HAVE_FIXED_HOST_ID
 bool Host::compute_machine_id(uint16_t& id)
 {
     // Compute machine id using /etc/machine-id

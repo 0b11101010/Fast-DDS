@@ -392,6 +392,9 @@ option(FASTDDS_FIXED_HOST_ID_ENABLE "Enable Fast DDS Fixed Host ID Module" OFF)
 if (FASTDDS_FIXED_HOST_ID_ENABLE)
     set(HAVE_FIXED_HOST_ID 1)
     message(STATUS "HAVE_FIXED_HOST_ID is set to ${HAVE_FIXED_HOST_ID}")
+else ()
+    set(HAVE_FIXED_HOST_ID 0)
+    message(STATUS "HAVE_FIXED_HOST_ID is set to ${HAVE_FIXED_HOST_ID}")
 endif ()
 
 ###############################################################################
